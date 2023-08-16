@@ -1,0 +1,17 @@
+{% extends 'sidebar.html' %} {% block sidebar %}
+<main>
+  {% if not questions %}
+    <h1>You have not posted any questions :(</h1>
+  {% endif %}
+  {% for x in questions %}
+  <section class="box">
+    <h3>{{x.user.username}}</h3>
+    <p>{{x.question | safe}}</p>
+    <a href="{% url 'stack:comments' x.id %}">view answers</a>
+    <p></p>
+    <a class="btn btn-danger" href="{% url 'stack:delete' x.pk %}">Delete Post</a>
+  </section>
+  <hr style="color: white" />
+  {% endfor %}
+</main>
+{% endblock sidebar %}

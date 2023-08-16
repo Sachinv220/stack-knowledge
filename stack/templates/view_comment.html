@@ -1,0 +1,17 @@
+{% extends 'sidebar.html' %} {% block sidebar %} 
+<main>
+  {% if not answers %}
+  <h1>There is no answers</h1>
+  {% endif %} {% for x in answers %}
+  <div class="box">
+    <h1>{{x.posted_by}}</h1>
+    <p>{{x.answer | safe }}</p>
+  </div>
+  {% endfor %} {% if asked != user %}
+  <form method="post">
+    {% csrf_token %} {{form.media}} {{form.as_p}}
+    <button class="btn btn-primary">Answer</button>
+  </form>
+  {% endif %}
+</main>
+{% endblock sidebar %}

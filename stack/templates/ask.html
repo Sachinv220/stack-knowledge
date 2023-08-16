@@ -1,0 +1,12 @@
+{% extends 'sidebar.html' %} {% block sidebar %} {% load static %}
+<link rel="stylesheet" href="{% static 'css/ask.css' %} " />
+<section>
+  <h1>Ask you question</h1>
+  <form method="post">
+    {% csrf_token %}
+    {{form.media}}
+    {{form.as_p}}
+    <button class="btn btn-primary">Ask</button>
+  </form>
+</section>
+{% endblock sidebar %}

@@ -1,0 +1,18 @@
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+section * {
+  margin-bottom: 1rem;
+}
+
+input {
+    width: 30em !important;
+}
+
+h1 {
+    color: rgb(240, 238, 238);
+}
