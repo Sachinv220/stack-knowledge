@@ -14,3 +14,16 @@ Stack-Knowledge is a web application inspired by Quora, designed to provide a pl
 - Django 3.2+
 - HTML/CSS/JS (with Bootstrap)
 - SQLite
+
+# Setup
+Run the following commands
+```zsh 
+pipenv python manage.py migrate
+```
+```zsh 
+pipenv python manage.py makemigrations
+```
+To start the server run the following command
+```zsh 
+pipenv python manage.py runserver
+```
