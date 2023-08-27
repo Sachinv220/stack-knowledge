@@ -18,12 +18,12 @@ Stack-Knowledge is a web application inspired by Quora, designed to provide a pl
 # Setup
 Run the following commands
 ```zsh 
-pipenv python manage.py migrate
+python manage.py migrate
 ```
 ```zsh 
-pipenv python manage.py makemigrations
+python manage.py makemigrations
 ```
 To start the server run the following command
 ```zsh 
-pipenv python manage.py runserver
+python manage.py runserver
 ```
